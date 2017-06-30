@@ -6,16 +6,18 @@
 	</head>
 	<body>
 	<!--	<p th:text="'id: '+${Chef.id}"/>-->
-		<p th:text="'fullname: '+${rooms.fullname}"/>
-		<p th:text="'roomNumbers: '+${rooms.roomNumbers}"/>
-		<p th:text="'streetAddress: '+${rooms.streetAddress}"/>
-		<p th:text="'city: '+${rooms.city}"/>
-		<p th:text="'state: '+${rooms.state}"/>
-		<p th:text="'price: '+${rooms.city}"/>
-		<p th:text="'fullname: '+${chef.fullname}"/>
-		<p th:text="'dish: '+${chef.dish}"/>
-		<p th:text="'fullname: '+${chef.fullname}"/>
-		<p th:text="'dish: '+${chef.dish}"/>
-		<a href="/add">You want to bring more dishes</a>
+		<p th:text="'fullname: '+${room.fullname}"/>
+		<p th:text="'roomNumbers: '+${room.roomNumbers}"/>
+		<p th:text="'streetAddress: '+${room.streetAddress}"/>
+		<p th:text="'city: '+${room.city}"/>
+		<p th:text="'state: '+${room.state}"/>
+		<p th:text="'price: '+${room.city}"/>
+		<p th:text="'wifi: '+${room.wifi}"/>
+		<p th:text="'cable: '+${room.cable}"/>
+		<p th:text="'privateBathroom: '+${room.privateBathroom}"/>
+		<p th:text="'rules: '+${room.rules}"/>
+		<p th:text="'rented: '+${room.rented}"/>
+		
+		<a href="/new">Home</a>
 	</body>
 </html>

@@ -2,10 +2,13 @@ package davelistpac;
 
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Rooms {
@@ -14,19 +17,34 @@ public class Rooms {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
+	@Column(unique = true)
+	@Size(min=2, max=30)
 	private String fullname;
+	
+	@NotNull
 	private int roomNumbers;
+	
 	private String streetAddress; 
 	private String city;
+	
+	@Size(max=2)
 	private String state;
+	
 	private int price;
 	private String cable;
 	private String wifi;
 	private String privateBathroom;
+	
 	private String rules;
 	private String rented;
 	
-	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 	
 	public String getFullname() {
 		return fullname;

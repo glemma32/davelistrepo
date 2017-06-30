@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Result</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	</head>
+	<body>
+		<div th:each="eachroom:${roomList}">
+		<p th:text="'fullname: '+${eachroom.fullname}"/>
+		<p th:text="'roomNumbers: '+${eachroom.roomNumbers}"/>
+		<p th:text="'streetAddress: '+${roomList.streetAddress}"/>
+		<p th:text="'city: '+${eachroom.city}"/>
+		<p th:text="'state: '+${eachroom.state}"/>
+		<p th:text="'price: '+${eachroom.city}"/>
+		<p th:text="'wifi: '+${eachroom.wifi}"/>
+		<p th:text="'cable: '+${eachroom.cable}"/>
+		<p th:text="'privateBathroom: '+${eachroom.privateBathroom}"/>
+		<p th:text="'rules: '+${eachroom.rules}"/>
+		<p th:text="'rented: '+${eachroom.rented}"/>
+		</div>
+		<a href="/new">Home</a>
+		
+	</body>
+</html>

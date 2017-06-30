@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Result</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	</head>
+	<body>
+	
+		<div th:each="eachroom:${roomList}">
+		<p th:text="'id: '+${eachroom.id}"/>
+		<p th:text="'fullname: '+${eachroom.fullname}"/>
+		<p th:text="'roomNumbers: '+${eachroom.roomNumbers}"/>
+		<p th:text="'streetAddress: '+${eachroom.streetAddress}"/>
+		<p th:text="'city: '+${eachroom.city}"/>
+		<p th:text="'state: '+${eachroom.state}"/>
+		<p th:text="'price: '+${eachroom.city}"/>
+		<p th:text="'wifi: '+${eachroom.wifi}"/>
+		<p th:text="'cable: '+${eachroom.cable}"/>
+		<p th:text="'privateBathroom: '+${eachroom.privateBathroom}"/>
+		<p th:text="'rules: '+${eachroom.rules}"/>
+		<p th:text="'rented: '+${eachroom.rented}"/>
+		
+		</div>
+	<form action="#" th:action="@{/select}" th:object="${room}" method="post">
+   		<p> <input type="text" th:field="*{id}" placeholder="id"></input></p>
+   		<button type="submit" class="btn btn-default">Submit</button>
+  	</form>
+		
+	</body>
+</html>
